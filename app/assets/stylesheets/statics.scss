@@ -1,3 +1,76 @@
 // Place all the styles related to the statics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.blank{
+  margin: 40px;
+}
+
+.return{
+  margin: 5px 0px 5px 0px;
+}
+
+.delete{
+  text-align: right;
+  margin: 10px;
+}
+
+#application-container {
+  margin-top: 70px;
+}
+
+
+.navbar-inverse {
+  background-color: #aac9dd;
+  border-color: #aac9dd;
+}
+
+.navbar-inverse .navbar-toggle:focus,
+.navbar-inverse .navbar-toggle:hover {
+  background-color: #99a9bb;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: #ffffff;
+}
+
+.navbar-brand {
+  color: #ffffff !important;
+}
+
+#bs-example-navbar-collapse-1 {
+  border-color: #99a9bb;
+}
+
+#bs-example-navbar-collapse-1 ul li a {
+  color: #ffffff;
+}
+
+.user-link {
+  color: #0081bd !important;
+}
+
+.map-select {
+  width: 60%;
+}
+
+.map-submit {
+  width: 30%;
+}
+
+.map-form-group {
+  display: inline-block;
+}
+
+.map-form-section {
+  margin: 10px;
+  text-align: center;
+}
+
+.user-return {
+  margin: 10px;
+  text-align: right;
+}
+
+.user-button {
+  width: 80px;
+}
