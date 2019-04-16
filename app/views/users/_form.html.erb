@@ -1,0 +1,26 @@
+<div class="form-group">
+  <%= f.label :name, 'ユーザー名' %>
+  <%= f.text_field :name, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+  <%= f.label :email, 'メールアドレス' %>
+  <%= f.email_field :email, class: 'form-control' %>
+</div>
+
+<% if current_user.admin %>
+  <div class="form-group">
+    <%= f.label :admin, '管理者権限' %>
+    <%= f.select :admin, [['なし', false], ['あり', true]], class: 'form-control' %>
+  </div>
+<% end %>
+
+<div class="form-group">
+  <%= f.label :password, 'パスワード' %>
+  <%= f.password_field :password, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+  <%= f.label :password_confirmation, '確認パスワード' %>
+  <%= f.password_field :password_confirmation, class: 'form-control' %>
+</div>

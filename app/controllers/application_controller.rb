@@ -12,14 +12,13 @@ class ApplicationController < ActionController::Base
 
   def correct_user
     user = User.find(params[:id])
-    unless user == current_user || user.admin
+    unless user == current_user || current_user.admin
       redirect_to root_url
     end
   end
 
   def admin_user
-    user = User.find(params[:id])
-    unless user.admin
+    unless current_user.admin
       redirect_to root_url
     end
   end

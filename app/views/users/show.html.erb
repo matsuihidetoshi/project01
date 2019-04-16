@@ -1,2 +1,20 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="text-center">
+  <h1>ユーザー情報</h1>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div>ユーザー名：<%= @user.name %></div>
+    <div>メールアドレス：<%= @user.email %></div>
+    <% if current_user.admin %>
+      <div>管理者権限：<% if @user.admin %>あり<% else %>なし<% end %></div>
+    <% end %>
+    <%= link_to '編集', edit_user_path(@user), class: 'btn btn-success btn-block' %>
+    <% if current_user.admin %>
+      <%= link_to '削除', @user, method: :delete, data: {confirm: 'ユーザーを削除すると、取引先情報等の関連データの紐づきが失われます。本当に削除しますか？'}, class: 'btn btn-danger btn-block' %>
+    <% end %>
+    <div data-turbolinks="false" class="return">
+      <%= link_to 'トップページへ戻る', root_path, class: 'btn btn-warning btn-block' %>
+    </div>
+  </div>
+</div>
