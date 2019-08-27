@@ -51,4 +51,4 @@ production:
   <<: *default
   database: project01_production
   username: root
-  password:
+  password: <%= ENV["MYSQL_AUTH"] %>
